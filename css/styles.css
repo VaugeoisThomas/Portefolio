@@ -38,20 +38,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-ul {
-    list-style-type: none;
-}
-
-hr {
-    border: 1px solid var(--button-border);
-}
-
-a {
+    list-style: none;
     text-decoration: none;
-    cursor: pointer;
-    color: var(--secondary-text);
+    color: inherit;
 }
 
 /* BASE ELEMENT */
@@ -60,28 +49,9 @@ html {
     background-color: var(--background-primary)
 }
 
-/* GENERIC CLASSES */
-
-.button {
-    border-width: 2px;
-    border-style: solid;
-    padding: var(--padding);
-    width: fit-content;
-    border-color: var(--button-border);
-    background-color: var(--button-background);
-    color: var(--background-secondary);
-    border-radius: var(--radius);
-}
-
-.button-rounded {
-    border-radius: 50%;
-}
-
-/* PAGE WIDTH < 900PX */
-
 /* NAVBAR */
 
-.navbar {
+/* .navbar {
     height: 100px;
     display: flex;
     align-items: center;
@@ -127,7 +97,7 @@ html {
     width: 100%;
     text-transform: uppercase;
 }
-
+*/
 .menu-hamburger {
     width: 60px;
     height: 60px;
@@ -195,7 +165,7 @@ html {
 .menu-hamburger.is-opened span:after {
     transform: translateY(0) rotate(-45deg);
 }
-
+/*
 #theme-button{
     cursor: pointer;
 }
@@ -210,45 +180,46 @@ html {
 
 .main {
     transition: all ease-in-out .2s;
-}
+} */
 
 /* MAIN CONTENT */
 
 
 @media screen and (min-width: 900px) {
-
-    .navbar .logo {
-        margin: 0;
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
         width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 9%;
     }
 
-    .menu-hamburger {
+    .header .logo {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    .header .navbar {
+        justify-self: flex-end;
+    }
+
+    .header .navbar a {
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: var(--primary-text);
+        margin-left: 3.5rem;
+        text-transform: uppercase;
+    }
+
+    .header .menu-hamburger {
         display: none;
     }
 
-    .navbar {
-        display: flex;
-        padding: 0 10px;
-    }
-
-    .navbar .nav-links  {
-        position: static;
-        margin-left: 0;
-        display: flex;
-        width: auto;
-    }
-
-    .navbar .nav-links ul {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .navbar .nav-links ul li  {
-        width: 130px;
-        margin: 0 20px;
-    }
-
-    #theme-button {
-        display: block;
+    section  {
+        min-height: 100vh;
+        padding: 10rem 9% 2rem;
     }
 }
