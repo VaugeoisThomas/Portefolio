@@ -402,7 +402,7 @@ html {
         position: relative;
         padding-left: 2rem;
     }
-    .resume .resume-row .resume-column .resume-box .resume-content .content {
+    .resume .resume-row .resume-column .resume-box .resume-content .card {
         position: relative;
         padding: 1.5rem;
         border: 2px solid var(--button-border);
