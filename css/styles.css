@@ -402,11 +402,29 @@ html {
         position: relative;
         padding-left: 2rem;
     }
+
     .resume .resume-row .resume-column .resume-box .resume-content .card {
         position: relative;
         padding: 1.5rem;
         border: 2px solid var(--button-border);
         border-radius: var(--radius);
         margin-bottom: 1rem;
+        overflow: hidden;
+    }
+
+    .resume .resume-row .resume-column .resume-box .resume-content .card::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        background-color: var(--component);
+        z-index: -1;
+        transition: .5s;
+    }
+
+    .resume .resume-row .resume-column .resume-box .resume-content .card:hover::before {
+        width: 100%;
     }
 }
