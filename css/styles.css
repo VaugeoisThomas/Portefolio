@@ -43,6 +43,7 @@
     list-style: none;
     text-decoration: none;
     color: inherit;
+    scroll-behavior: smooth;
 }
 
 /* BASE ELEMENT */
@@ -192,9 +193,36 @@ html {
 
 @media screen and (min-width: 940px) {
 
+    p {
+        font-size: 1.6rem;
+        margin: 2rem 0 2rem;
+    }
+
     section {
         min-height: 100vh;
         padding: 10rem 9% 2rem;
+    }
+
+    span {
+        color: var(--secondary-text);
+    }
+
+
+    /* GENERIC CLASSES */
+    .btn-group {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 34.5rem;
+        height: 5rem;
+    }
+
+    .btn-alone {
+        position: relative;
+        top: 0;
+        left: 39%;
+        display: inline-block;
+        height: 5rem;
     }
 
     .btn {
@@ -214,6 +242,20 @@ html {
     .btn-rounded {
         border-radius: var(--radius);
     }
+
+    .content {
+        max-width: 60rem;
+    }
+
+    .heading {
+        font-size: 4.6rem;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+    }
+
+
+    /* HEADER SECTION DESIGN */
 
     .header {
         position: fixed;
@@ -243,45 +285,25 @@ html {
         display: none;
     }
 
+    /* HOME SECTION DESIGN */
+
     .home {
         display: flex;
-        align-items: center;
-        padding: 0 9%;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5% 9%;
     }
 
-    .home .content {
-        max-width: 60rem;
-    }
-
-    .home .content h2 {
-        font-size: 4.6rem;
-        font-weight: 700;
-        line-height: 1.3;
-    }
-
-    .home .content .text-animate {
+    .home .text-animate {
         position: relative;
         width: 32.8rem;
     }
 
-    .home .content .text-animate h3 {
+    .home .text-animate h3 {
         font-size: 2.2rem;
         font-weight: 700;
         color: transparent;
         -webkit-text-stroke: .7px var(--secondary-text);
-    }
-
-    .home .content p {
-        font-size: 1.6rem;
-        margin: 2rem 0 4rem;
-    }
-
-    .btn-group {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        width: 34.5rem;
-        height: 5rem;
     }
 
     .home-social {
@@ -306,18 +328,85 @@ html {
 
     .home-img {
         position: absolute;
-        top: 17rem;
-        right: 0;
-        width: 45%;
-        height: 50%;
+        top: 23rem;
+        right: 11.6rem;
+        width: 30%;
+        height: 40%;
         background: transparent;
         background: url('../img/development.png') no-repeat;
         background-size: cover;
         background-position: center;
-        transition: opacity .3s;
+        transition: .5s;
     }
 
     .home-img:hover {
         opacity: .8;
+    }
+
+    /* ABOUT SECTION DESIGN */
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5% 9%;
+        background-color: var(--background-secondary);
+    }
+
+    .about-img {
+        position: relative;
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-img img {
+        width: 90%;
+        border-radius: 50%;
+        border: .2rem solid var(--button-border);
+    }
+
+    .resume {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5rem;
+        min-height: auto;
+    }
+
+    .resume .resume-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+
+    .resume .resume-row .resume-column {
+        flex: 1 1 40rem;
+    }
+
+    .resume .resume-row .resume-column .title {
+        font-size: 2.5rem;
+        margin: 0 0 1.5rem 2rem;
+    }
+
+    .resume .resume-row .resume-column .resume-box {
+        border-left: .2rem solid var(--button-border);
+    } 
+
+    .resume .resume-row .resume-column .resume-box .resume-content {
+        position: relative;
+        padding-left: 2rem;
+    }
+    .resume .resume-row .resume-column .resume-box .resume-content .content {
+        position: relative;
+        padding: 1.5rem;
+        border: 2px solid var(--button-border);
+        border-radius: var(--radius);
+        margin-bottom: 1rem;
     }
 }
