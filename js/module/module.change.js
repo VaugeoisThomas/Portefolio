@@ -1,7 +1,7 @@
 import { toggleTheme } from './module.toggle.js';
 
 export function changeTheme () {
-    const button = document.querySelector('#theme-button');
+    const button = document.querySelector('.theme-button');
     const logo = document.querySelector('#theme-logo');
     let theme = "light";
 
