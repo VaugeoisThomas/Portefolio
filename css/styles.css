@@ -245,8 +245,7 @@ section {
 .home .content .text-animate h3 {
     font-size: 1.4rem;
     font-weight: 700;
-    color: transparent;
-    -webkit-text-stroke: .7px var(--secondary-text);
+    color: var(--secondary-text);
 }
 
 .home .content .home-social {
