@@ -377,3 +377,10 @@ section {
     padding-bottom: 5rem;
     background-color: var(--background-secondary);
 }
+
+@media only screen and (min-width: 500px) {
+    .home .content .home-img {
+        top: 11%;
+        height: 27%;
+    }
+}
